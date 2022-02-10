@@ -8,8 +8,11 @@ class Director:
     pass
 
 class Jumper:
-    
     #Brenner
+    def construct_jumper():
+        pass
+    def fail_check(self):
+        pass
     #Mahonrri Mendez
     
     pass
