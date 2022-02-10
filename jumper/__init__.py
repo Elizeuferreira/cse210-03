@@ -9,7 +9,7 @@ class Director:
 
 class Jumper:
     #Brenner
-    def construct_jumper():
+    def init_jumper(self):
         pass
     def fail_check(self):
         pass
