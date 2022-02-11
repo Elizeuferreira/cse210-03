@@ -10,7 +10,10 @@ class Director:
 class Jumper:
     #Brenner
     def init_jumper(self):
-        pass
+        print("   O")
+        print("  /|\")
+        print("  / \")
+              
     def fail_check(self):
         pass
     #Mahonrri Mendez
