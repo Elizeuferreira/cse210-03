@@ -123,11 +123,36 @@ class Parachute:
                 self.is_playing = False
 
 
-class word:
-    
-    #Josefini or Anyone
-    
-    pass
+import random
+#Elizeu 
+class Word:
+
+    def __init__(self):
+        self._words = [
+            "green",
+            "brown",
+            "blues",
+            "apple",
+            "books",
+            "magic",
+            "house",
+            "horse",
+            "uncle",
+            "angle"
+        ]
+        self._random_word = ''
+        
+    def new_word(self):
+        self._word = random.choice(self._words)
+        return self.new_word    
+        
+
+    def hide_word(self):
+        letters = []
+        letters = ', '.join(letters)
+        letters = ''.join(str(letters).split(','))
+        return letters
+  
     
 Jumper.init_jumper()
 Jumper.fail_check()
