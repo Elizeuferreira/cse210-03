@@ -1,4 +1,4 @@
-from director import Director
+from Game.director import Director
 
 dir = Director()
 dir = dir._words
