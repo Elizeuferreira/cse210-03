@@ -1,40 +1,71 @@
-class Jumper:
-    def __init__(self):
-        
-        self.line0 = ("")
-        self.line1 = ("  ___")
-        self.line2 = (" /___\ ")
-        self.line3 = (" \   /")
-        self.line4 = ("  \ /")
-        self.line5 = ("   0")
-        self.line6 = ("  /|\ ")
-        self.line7 = ("  / \ ")
-        self.line8 = ("")
-        self.line9 = ("^^^^^^^" )
-        self.is_playing = True
-
+class Parachute:
+    """Where we create and change the tries of the parachute
     
+    """
+    def __init__(self):
+        """Constructs the parachute"""
 
-    def display_parachute(self, number_of_mistakes):
+        self._parachutes = 0
+        self._parachute = 0
 
-        lines = [self.line0,self.line1,self.line2,self.line3,self.line4,self.line5,self.line6,self.line7,self.line8,self.line9]
-      
-        for line in lines:
-            index = lines.index(line)
-            if index < (number_of_mistakes+1):
-                line = ""
-            print(line)
-        if number_of_mistakes >= 4:
-            print("Game over\n")
-            self.is_playing = False
-
-jumper = Jumper()
-jumper.display_parachute(4)
-
-        "2": parachute2,
-        "3": parachute3,
-        "4": parachute4,
-    }
-
-    print(dictParachute[n])
+    def show_parachute(self, tries):
+        stages = [  # final state: No parachute left 
+            """
+             x 
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Small strings (1 attempt left)
+            """
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Medium strings (2 attempts left)
+            """
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Long strings (3 attempts left)
+            """
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # middle of chute (4 attempts left)
+            """
+          /_____\ 
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Initial state (5 attempts)
+            """
+           _____
+          /_____\ 
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            ]
+        return print(stages[tries])
     
