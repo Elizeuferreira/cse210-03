@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Jumper:
     #Brenner
 
@@ -24,3 +25,6 @@ class Jumper:
             print()
             print("Game Over!")
             return False
+=======
+
+>>>>>>> 2d957382239fbc9f5f51c5b8eb2dbc56efb7ada5

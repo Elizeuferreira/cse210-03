@@ -4,8 +4,7 @@ from game.word import Word
 
 class Director:
 
-
-    """A person who directs the game
+    """A person who directs has the responsability to drive the game
     Attributes:
         jumper (Jumper): the game's jumper
         is_guessing (boolean): whether or not to keep playing

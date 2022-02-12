@@ -1,5 +1,10 @@
 """ The game package contains specific classes for playing jumper.
 """
+#Elizeu Silva
+#Shawn Yang
+from game.jumper import Jumper
+from game.parachute import Parachute
+from game.word import Word
 
 # Elizeu Silva
 # Shawn Yang
@@ -64,7 +69,6 @@ class Director:
 
     def _do_outputs(self):
         self._is_guessing = False
-
 class Jumper:
     #Brenner
 
