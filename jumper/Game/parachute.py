@@ -1,3 +1,11 @@
+class Parachute:
+      
+      def __init__(self):
+            
+            self.parachutes = 0
+            self.parachute = 0
+        
+
 def showParachute(n):
 
     parachute0 = "\

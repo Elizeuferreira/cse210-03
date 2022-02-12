@@ -1,31 +1,26 @@
-from Game.director import Director
-from parachute import showParachute
+class Jumper:
+    #Brenner
 
-di = Director()
-word = di.chosenLetter()
-print("_ _ _ _ _")
-showParachute("0")
-print("^^^^^^^")
-while di.state:
+    #Code that Will Construct the Jumper.
+    def init_jumper():
+        global head,arms,legs
+        head=("   O")
+        arms=("  /|\ ")
+        legs=("  / \ ")
+        print(head)
+        print(arms)
+        print(legs)
     
-    letterGuess = input("Guess a letter [a-z]: ")
-    listWord = list()
-    for letter in word:
-        if letterGuess == letter:
-            listWord.append(letterGuess)
+    #Code that will first check
+    def fail_check():
+        lives=-1
+        if  lives >=0:
+            return True
         else:
-            listWord.append("_")
-    wordRevelado = ' '.join(listWord)
-    print(wordRevelado)
-    if wordRevelado == word:
-        print("YOU WIN!")
-        di.state = False
-    if letterGuess in wordRevelado:
-        showParachute("0")
-        print("^^^^^^^")
-    else:
-        di.errors += 1 
-        showParachute(str(di.errors))
-        if di.errors == 4:
-            print("GAME OVER, YOU DIED!")
-            di.state = False
+            head=("   X")
+            print(head)
+            print(arms)
+            print(legs)
+            print()
+            print("Game Over!")
+            return False
