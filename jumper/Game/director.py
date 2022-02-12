@@ -21,7 +21,7 @@ class Director:
         self._word = Word()
         self._jumper = Jumper()
         self.guessed_word = ""
-        self.tries = 5
+        self.tries = 4
         self.hidden_word = []
         
 
