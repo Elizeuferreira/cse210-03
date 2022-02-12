@@ -103,8 +103,8 @@ class parachute:
     pass
 
 class word:
-    lives=-1
-    #Josefini
+    
+    #Josefini or Anyone
     
     pass
     
