@@ -9,6 +9,14 @@ class Parachute:
         self._parachute = 0
 
     def show_parachute(self, tries):
+        """
+        Method to show condition of parachute accordingly to the number of left attempts
+        
+        Args:
+        self: an instance of Parachute
+        tries: number of attempts left
+        """
+        
         stages = [  # final state: No parachute left 
             """
              x 
