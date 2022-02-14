@@ -37,13 +37,13 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self._parachute.show_parachute(self.tries)
+        self._parachute._show_parachute(self.tries)
         listWord = list(len(self._hidden_word) * "_")
         while self._playing:            
             guess_letter = self._get_inputs()
             self._guess_is_true = guess_letter in self._hidden_word
             if self._guess_is_true:
-                self.compare_word(listWord, guess_letter)
+                self._compare_word(listWord, guess_letter)
                 self._show_word_revelado(listWord)
                 self._parachute.show_parachute(self.tries)
                 if self._guess_word == self._hidden_word:
@@ -75,7 +75,7 @@ class Director:
                     self._playing = False
 
 
-    def compare_word(self, listWord, guess_letter):
+    def _compare_word(self, listWord, guess_letter):
         """
         Compares letters in hiden word with a letter that the user guessed and 
         make updates to the word to show
