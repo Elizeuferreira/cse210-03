@@ -8,7 +8,7 @@ class Parachute:
         self._parachutes = 0
         self._parachute = 0
 
-    def show_parachute(self, tries):
+    def _show_parachute(self, tries):
         """
         Method to show condition of parachute accordingly to the number of left attempts
         
