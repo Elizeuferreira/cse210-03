@@ -1,6 +1,5 @@
 """class Jumper:
     #Brenner
-
     #Code that Will Construct the Jumper.
     def init_jumper():
         global head,arms,legs
