@@ -33,8 +33,8 @@ Required Technologies:
 
 Authors
 
-- Elizeu Silva
-- Alexander
-- Brenner
-- Josefini
-- Shawn 
+- Elizeu Silva, elizeu.aliam@gmail.com
+- Alexander, kar21020@byui.edu
+- Brenner mann- I made the game run with 3 classes, we are waiting for the jumper class, please review the other classes and see if you can insert modifications to the game without changing the other classes.
+- Josefini - Student did not participate in the creation of the game, he still needs to enter his collaboration. @Josefini we are waiting for your collaboration.
+- Shawn Yang

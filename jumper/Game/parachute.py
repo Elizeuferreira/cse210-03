@@ -1,47 +1,79 @@
-def showParachute(n):
-
-    parachute0 = "\
-      ___ \n \
-    /___\ \n \
-    \   / \n \
-     \ / \n \
-      0 \n \
-     /|\  \n \
-     / \ \n "
-
-    parachute1 = "\
-     /___\ \n \
-    \   / \n \
-     \ / \n \
-      0 \n \
-     /|\  \n \
-     / \ \n "
+class Parachute:
+    """Where we create and change the tries of the parachute
     
-    parachute2 = "\
-     \   / \n \
-     \ / \n \
-      0 \n \
-     /|\  \n \
-     / \ \n "
+    """
+    def __init__(self):
+        """Constructs the parachute"""
 
-    parachute3 = "\
-      \ / \n \
-      0 \n \
-     /|\  \n \
-     / \ \n "
+        self._parachutes = 0
+        self._parachute = 0
 
-    parachute4 = "\
-       x \n \
-     /|\  \n \
-     / \ \n "
-
-    dictParachute = {
-        "0" : parachute0,
-        "1": parachute1,
-        "2": parachute2,
-        "3": parachute3,
-        "4": parachute4,
-    }
-
-    print(dictParachute[n])
+    def _show_parachute(self, tries):
+        """
+        Method to show condition of parachute accordingly to the number of left attempts
+        
+        Args:
+        self: an instance of Parachute
+        tries: number of attempts left
+        """
+        
+        stages = [  # final state: No parachute left 
+            """
+             x 
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Small strings (1 attempt left)
+            """
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Medium strings (2 attempts left)
+            """
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Long strings (3 attempts left)
+            """
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # middle of chute (4 attempts left)
+            """
+          /_____\ 
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            # Initial state (5 attempts)
+            """
+           _____
+          /_____\ 
+          \     /
+           \   /
+            \ /
+             O
+            /|\ 
+            / \ 
+       ^^^^^^^^^^^^^
+            """,
+            ]
+        return print(stages[tries])
     

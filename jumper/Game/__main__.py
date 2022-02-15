@@ -1,5 +1,4 @@
-from director import Director
+from game.director import Director
 
-dir = Director()
-dir = dir._words
-print(dir)
+director = Director()
+director.start_game()
