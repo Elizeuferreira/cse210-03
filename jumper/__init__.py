@@ -14,6 +14,7 @@ class Director:
     
 class Jumper:
     #Brenner
+    Pass
 
    
            
