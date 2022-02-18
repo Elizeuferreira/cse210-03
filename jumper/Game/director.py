@@ -1,6 +1,5 @@
 from parachute import Parachute
 from word import Word
-from jumper import Jumper # *Brenner will still write the code for this class
 
 
 class Director:
