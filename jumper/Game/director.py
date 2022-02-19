@@ -23,6 +23,7 @@ class Director:
         self._playing = True
         self._parachute = Parachute()
         self._word = Word()
+        self._jumper = Jumper()
         self._hidden_word = self._word.random_word()
         self._guess_word = ""
         self._guess_is_true = None
