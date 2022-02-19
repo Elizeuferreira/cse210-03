@@ -40,5 +40,5 @@ README.md
 * Elizeu Silva, fer21029@byui.edu
 * Alexander, kar21020@byui.edu
 * Brenner mann()
-*Josefini ()
+* Josefini ()
 * Shawn Yang, yangshawn14@byui.edu
