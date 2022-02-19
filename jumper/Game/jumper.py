@@ -1,74 +1,20 @@
-class Jumper:     
+from word import Word
 
-    """A service that handles terminal operations. 
-    Similar to the 'teminal service' file from 'seeker' assignment
+class Jumper:
+    def __init__(self):
+       self._word = Word()
+       self._hidden_word = self._word.random_word()
+       self._guess_word = ""
     
-    The responsibility of a TerminalService is to provide input and output operations for the 
-    terminal.
-    """
 
-    def read_text(self, prompt):
-        """Gets text input from the terminal. Directs the user with the given prompt.
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            prompt (string): The prompt to display on the terminal.
-        Returns:
-            string: The user's input as text.
-        """
-        return input(prompt)
-
-    def read_number(self, prompt):
-        """Gets numerical input from the terminal. Directs the user with the given prompt.
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            prompt (string): The prompt to display on the terminal.
-        Returns:
-            float: The user's input as a number.
-        """
-        return float(input(prompt))
+    def compare_word(self, listWord, guess_letter):
         
-    def write_text(self, text):
-        """Displays the given text on the terminal. 
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            text (string): The text to display.
-        """
-        print(text)
-class Jumper:      
+        for i in range(len(self._hidden_word)):
+            if guess_letter == self._hidden_word[i]:
+                listWord[i] = guess_letter
 
-    """A service that handles terminal operations. 
-    Similar to the 'teminal service' file from 'seeker' assignment
-    
-    The responsibility of a TerminalService is to provide input and output operations for the 
-    terminal.
-    """
-
-    def read_text(self, prompt):
-        """Gets text input from the terminal. Directs the user with the given prompt.
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            prompt (string): The prompt to display on the terminal.
-        Returns:
-            string: The user's input as text.
-        """
-        return input(prompt)
-
-    def read_number(self, prompt):
-        """Gets numerical input from the terminal. Directs the user with the given prompt.
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            prompt (string): The prompt to display on the terminal.
-        Returns:
-            float: The user's input as a number.
-        """
-        return float(input(prompt))
-        
-    def write_text(self, text):
-        """Displays the given text on the terminal. 
-        Args: 
-            self (TerminalService): An instance of TerminalService.
-            text (string): The text to display.
-        """
-        print(text)
-    
-   
+    def _show_word_revelado(self, listWord):
+        guessWord = "".join(listWord)
+        self._guess_word = guessWord
+        word = " ".join(listWord)
+        print(word)
