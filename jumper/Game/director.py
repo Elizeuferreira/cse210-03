@@ -1,6 +1,7 @@
 from parachute import Parachute
 from word import Word
-from jumper import Jumper 
+from jumper import Jumper
+
 
 class Director:
 
@@ -27,26 +28,26 @@ class Director:
         self._guess_is_true = None
         self.tries = 5
         self._jumper = Jumper()
-    
+      
+
     def start_game(self):
         """Starts the game by running the main game loop
         
         Args:
             self (Director): an instance of Director.
         """
-        self._parachute._show_parachute(self.tries)
+        self._parachute.show_parachute(self.tries)
         listWord = list(len(self._hidden_word) * "_")
         while self._playing:            
             guess_letter = self._get_inputs()
             self._guess_is_true = guess_letter in self._hidden_word
             if self._guess_is_true:
-                self._jumper._compare_word(listWord, guess_letter)
-                self._jumper._show_word_revelado(listWord)
-                self._parachute._show_parachute(self.tries)
+                self.compare_word(listWord, guess_letter)
+                self._show_word_revelado(listWord)
+                self._parachute.show_parachute(self.tries)
                 if self._guess_word == self._hidden_word:
                     print("YOU WIN!!!!")
-                    self._playing = False            
-        
+                    self._playing = False
             else:
                 self.tries -= 1
                 print("You still have",self.tries, "tries" )
@@ -71,10 +72,25 @@ class Director:
                     print("       \_______/           ")
 
                     self._playing = False
+
+
+    def compare_word(self, listWord, guess_letter):
+        
+        for i in range(len(self._hidden_word)):
+            if guess_letter == self._hidden_word[i]:
+                listWord[i] = guess_letter
+
+    def _show_word_revelado(self, listWord):
+        guessWord = "".join(listWord)
+        self._guess_word = guessWord
+        word = " ".join(listWord)
+        print(word)
         
     def _get_inputs(self):
         guess_letter = input("Guess a letter [a-z]: ")
         return guess_letter
+
+                
 
                
  
