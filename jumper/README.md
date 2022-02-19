@@ -39,6 +39,6 @@ README.md
 ---
 * Elizeu Silva, fer21029@byui.edu
 * Alexander, kar21020@byui.edu
-* Brenner mann- I made the game run with 3 classes, we are waiting for the jumper class, please review the other classes and see if you can insert modifications to the game without changing the other classes.
-*Josefini - @Josefini we are waiting for your collaboration.
+* Brenner mann()
+*Josefini ()
 * Shawn Yang, yangshawn14@byui.edu
