@@ -1,5 +1,3 @@
-
-        
 from parachute import Parachute
 from word import Word
 from jumper import Jumper
