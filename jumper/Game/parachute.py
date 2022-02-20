@@ -1,22 +1,16 @@
 class Parachute:
-    """Where we create and change the tries of the parachute
-    
-    """
+     
+    """Where we create and change the tiers of the parachute
+
+    """ 
     def __init__(self):
         """Constructs the parachute"""
 
         self._parachutes = 0
-        self._parachute = 0
 
-    def _show_parachute(self, tries):
-        """
-        Method to show condition of parachute accordingly to the number of left attempts
-        
-        Args:
-        self: an instance of Parachute
-        tries: number of attempts left
-        """
-        
+
+    def show_parachute(self, tries):
+
         stages = [  # final state: No parachute left 
             """
              x 
@@ -75,5 +69,6 @@ class Parachute:
        ^^^^^^^^^^^^^
             """,
             ]
-        return print(stages[tries])
-    
+        
+        print(stages[tries])
+     
