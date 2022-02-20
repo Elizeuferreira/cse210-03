@@ -14,6 +14,8 @@ class Director:
     
 class Jumper:
     #Brenner
+    #Alexander
+    #Elizeu
     Pass
 
    
@@ -29,6 +31,6 @@ class Parachute:
 
 class Word
 
-#Josefini
+#Elizeu 
 
       pass
