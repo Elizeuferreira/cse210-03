@@ -35,7 +35,7 @@ class Director:
         """
         print()
         print("="*30)
-        print("   WELCOME TO JUMPER GAME!  ")
+        print("   WELCOME TO THE JUMPER GAME!  ")
         print("="*30)
         print()
         print(" Find out the secret word, you have 5 tries.. Have fun.")
