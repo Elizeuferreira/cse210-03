@@ -1,6 +1,6 @@
+from jumper import Jumper
 from parachute import Parachute
 from word import Word
-from jumper import Jumper
 
 class Director:
     """A person who directs the game
@@ -33,9 +33,12 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        print()
+        
+        print("*"*24)
+        print("***==WELCOME TO JUMPER GAME!==***")
+        print("*********************************")
         print("_ _ _ _ _")   
-        self._parachute._show_parachute(self.tries)
+        self._parachute.show_parachute(self.tries)
         listWord = list(len(self._hidden_word) * "_")
         hidden_word = self._hidden_word
         while self._playing:  
@@ -46,9 +49,11 @@ class Director:
                 print()
                 word = self._jumper._compare_word(listWord, guess_letter, hidden_word)
                 print(word)
-                self._parachute._show_parachute(self.tries)
+                self._parachute.show_parachute(self.tries)
                 if (str(word)).replace(" ","") == self._hidden_word:
+                    print()
                     print("YOU WIN!!!!")
+                    print()
                     self._playing = False
             else:
                 self.tries -= 1
@@ -58,7 +63,7 @@ class Director:
                 print()
                 print("You still have",self.tries, "tries" )
                 print()
-                self._parachute._show_parachute(self.tries)
+                self._parachute.show_parachute(self.tries)
                 if self.tries == 0:
                     print("GAME OVER!")
                     print("    _______________         ")
@@ -84,6 +89,3 @@ class Director:
         """
         guess_letter = input("Guess a letter [a-z]: ")
         return guess_letter
-
-               
- 
