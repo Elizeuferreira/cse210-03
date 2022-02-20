@@ -33,10 +33,13 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        
-        print("*"*24)
-        print("***==WELCOME TO JUMPER GAME!==***")
-        print("*********************************")
+        print()
+        print("="*30)
+        print("   WELCOME TO JUMPER GAME!  ")
+        print("="*30)
+        print()
+        print(" Find out the secret word, you have 5 tries.. Have fun.")
+        print()
         print("_ _ _ _ _")   
         self._parachute.show_parachute(self.tries)
         listWord = list(len(self._hidden_word) * "_")
@@ -89,3 +92,4 @@ class Director:
         """
         guess_letter = input("Guess a letter [a-z]: ")
         return guess_letter
+        
